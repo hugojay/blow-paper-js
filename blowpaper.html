@@ -8,9 +8,15 @@
 	<body>
 		<h1>Blow Away the Paper</h1>
 		<div class="blowpaper">
+			<div class="coupon">
+				恭喜你 大便一沱
+			</div>
 			<img src="st-3618059-s400.jpg" alt="">
 		</div>
 		<div class="blowpaper">
+			<div class="coupon">
+				恭喜你 大便一沱
+			</div>
 			<img src="st-3302696-s400.jpg" alt="">
 		</div>
 
@@ -21,25 +27,53 @@
 			}
 			.blowpaper{
 				float: left;margin: 0 10px 10px 0;
+				overflow: hidden;
+				width: 420px;
+				height: 420px;
 			}
-			.blowpaper img{
+			.blowpaper>img{
 				border-radius: 10px;
 				border: 10px solid #fff;
-			}
-			.blowpaper .paper_corner:hover{
-				box-shadow: inset 0 0 50px rgba(255,0,255,0.5);
+				position: relative;
+				z-index: 2;
 			}
 			.blowpaper .paper_corner{
 				position: absolute;
 				width: 400px;
 				height: 400px;
 				padding: 10px;
-				background: url(blowpaper_corner.png) bottom right no-repeat;
+			}
+			.blowpaper .paper_corner img{
+				position: absolute;
+				z-index: 3;
+				bottom: 0;
+				right: 0;
+			}
+			.coupon{
+				padding: 340px 10px 10px;
+				position: absolute;
+				width: 400px;
+				display: none;
 			}
 		</style>
 		<script type="text/javascript">
 			$(".blowpaper").each(function (i, v) {
-				$(this).children("img").before("<div class='paper_corner'></div>");
+				$(this).children("img").before("<div class='paper_corner'><img src='blowpaper_corner.png'></div>");
+				$(".paper_corner").on("click", "img", function(){
+					$(this).parents(".blowpaper").children(".coupon").show();
+					$(this).parents(".blowpaper").children("img").animate({
+							width: 400,
+							height: 300
+					}, 300, "linear");
+					$(this).animate({
+							width: 400,
+							height: 200,
+							bottom: 100
+					}, 300, "linear", function(){
+						//$(this).fadeOut(20);
+					});
+				});
+
 			})
 		</script>
 	</body>
