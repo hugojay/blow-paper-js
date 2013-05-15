@@ -1,0 +1,62 @@
+body{
+	background: rgba(0, 0, 0, 0.9);
+	color: #fff;
+}
+.blowpaper{
+	float: left;margin: 0 10px 10px 0;
+	overflow: hidden;
+	width: 420px;
+	height: 420px;
+}
+.blowpaper>img{
+	border-radius: 10px;
+	border: 10px solid #fff;
+	position: relative;
+	z-index: 2;
+}
+.blowpaper .paper_corner{
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	padding: 10px;
+}
+.blowpaper .paper_corner img{
+	position: absolute;
+	z-index: 3;
+	bottom: 0;
+	right: 0;
+}
+.coupon{
+	padding: 340px 10px 10px;
+	position: absolute;
+	width: 400px;
+	display: none;
+}
+
+.price{
+	color: red;
+}
+.price_and_go_buy {
+	margin: 0 auto;
+	padding: 10px 0;
+	-webkit-border-radius: 5px;
+	-webkit-background-clip: padding-box;
+	-moz-border-radius: 5px;
+	-moz-background-clip: padding;
+	border-radius: 5px;
+	background-clip: padding-box;
+	background: #f79a1a;
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0d…IxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+PC9zdmc+);
+	background-image: -moz-linear-gradient(top, #ffac2b, #f79a1a);
+	background-image: -webkit-linear-gradient(top, #ffac2b, #f79a1a);
+	background-image: -o-linear-gradient(top, #ffac2b, #f79a1a);
+	background-image: linear-gradient(to bottom, #ffac2b, #f79a1a);
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#ffac2b', EndColorStr='#f79a1a');
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+}
+.coupon a{
+	color: #fff;
+	text-decoration: none;
+}
