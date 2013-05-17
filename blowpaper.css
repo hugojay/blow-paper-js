@@ -25,6 +25,7 @@ body{
 	z-index: 3;
 	bottom: 0;
 	right: 0;
+	cursor: pointer;
 }
 .coupon{
 	padding: 340px 10px 10px;
@@ -55,8 +56,34 @@ body{
 	text-align: center;
 	color: #fff;
 	font-weight: bold;
+
+	-webkit-animation-name: bouncing;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+}
+.price_and_go_buy:hover {
+	-webkit-animation-name: glowing;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
 }
 .coupon a{
 	color: #fff;
 	text-decoration: none;
+}
+
+@-webkit-keyframes bouncing {
+	50% {
+		-webkit-transform: scale(1.05);
+	}
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+@-webkit-keyframes glowing {
+	50% {
+		box-shadow: 0 0 20px 10px #F00;
+	}
+	100% {
+		box-shadow: 0;
+	}
 }
