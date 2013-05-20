@@ -1,3 +1,6 @@
 [submodule "shake.js"]
 	path = shake.js
 	url = git://github.com/alexgibson/shake.js.git
+[submodule "animate.css"]
+	path = animate.css
+	url = git://github.com/daneden/animate.css.git

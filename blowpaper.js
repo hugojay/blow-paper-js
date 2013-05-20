@@ -42,4 +42,11 @@ $(function(){
 	window.addEventListener("shake", function(){
 		$(".blowpaper .paper_corner img").click();
 	}, false);
+
+	// acceleration sensor event binding
+	window.addEventListener('deviceorientation', function(event) {
+		if(event.beta < -10){ // 手機往前傾斜
+			$(".blowpaper .paper_corner img").click();
+		}
+	}, false);
 });

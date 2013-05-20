@@ -57,33 +57,11 @@ body{
 	color: #fff;
 	font-weight: bold;
 
-	-webkit-animation-name: bouncing;
-	-webkit-animation-duration: 1s;
+	-webkit-animation-duration: 2s;
 	-webkit-animation-iteration-count: infinite;
-}
-.price_and_go_buy:hover {
-	-webkit-animation-name: glowing;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-delay: 0.3s;
 }
 .coupon a{
 	color: #fff;
 	text-decoration: none;
-}
-
-@-webkit-keyframes bouncing {
-	50% {
-		-webkit-transform: scale(1.05);
-	}
-	100% {
-		-webkit-transform: scale(1);
-	}
-}
-@-webkit-keyframes glowing {
-	50% {
-		box-shadow: 0 0 20px 10px #F00;
-	}
-	100% {
-		box-shadow: 0;
-	}
 }
